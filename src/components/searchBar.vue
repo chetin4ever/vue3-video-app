@@ -1,7 +1,8 @@
 <template>
-  <h1>search bar</h1>
-  <h2>{{ searchQuery }}</h2>
-  <input type="text" v-model="searchQuery" @input="onInputChange" />
+  <div>
+    <!-- <input type="text" v-model="searchQuery" @input="onInputChange" /> -->
+    <input type="text" v-model="searchQuery" @keypress.enter="onInputChange" />
+  </div>
 </template>
 
 <script>
@@ -19,5 +20,12 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
+input {
+  width: 75%;
+}
+div {
+  text-align: center;
+  margin: 20px;
+}
 </style>
